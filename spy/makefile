@@ -10,20 +10,6 @@ GEN_CMDS__FLAG :=
 ORDERED_OBJS += \
 "./Application/bsp.o" \
 "./Application/main.o" \
-"./QPC/qep_hsm.o" \
-"./QPC/qep_msm.o" \
-"./QPC/qf_act.o" \
-"./QPC/qf_actq.o" \
-"./QPC/qf_defer.o" \
-"./QPC/qf_dyn.o" \
-"./QPC/qf_mem.o" \
-"./QPC/qf_ps.o" \
-"./QPC/qf_qact.o" \
-"./QPC/qf_qeq.o" \
-"./QPC/qf_qmact.o" \
-"./QPC/qf_time.o" \
-"./QPC/qv.o" \
-"./QPC_ports/qv_port.o" \
 "./QS/qs.o" \
 "./QS/qs_64bit.o" \
 "./QS/qs_fp.o" \
@@ -32,6 +18,20 @@ ORDERED_OBJS += \
 "./QS/qutest.o" \
 "./ek-tm4c123gxl/startup_TM4C123GH6PM.o" \
 "./ek-tm4c123gxl/system_TM4C123GH6PM.o" \
+"./qpc/ports/arm-cm/qv/gnu/qv_port.o" \
+"./qpc/src/qf/qep_hsm.o" \
+"./qpc/src/qf/qep_msm.o" \
+"./qpc/src/qf/qf_act.o" \
+"./qpc/src/qf/qf_actq.o" \
+"./qpc/src/qf/qf_defer.o" \
+"./qpc/src/qf/qf_dyn.o" \
+"./qpc/src/qf/qf_mem.o" \
+"./qpc/src/qf/qf_ps.o" \
+"./qpc/src/qf/qf_qact.o" \
+"./qpc/src/qf/qf_qeq.o" \
+"./qpc/src/qf/qf_qmact.o" \
+"./qpc/src/qf/qf_time.o" \
+"./qpc/src/qv/qv.o" \
 -Wl,-T"../lesson.ld" \
 $(GEN_CMDS__FLAG) \
 
@@ -44,16 +44,18 @@ RMDIR := rm -rf
 -include sources.mk
 -include subdir_vars.mk
 -include Application/subdir_vars.mk
--include QPC/subdir_vars.mk
--include QPC_ports/subdir_vars.mk
 -include QS/subdir_vars.mk
 -include ek-tm4c123gxl/subdir_vars.mk
+-include qpc/ports/arm-cm/qv/gnu/subdir_vars.mk
+-include qpc/src/qf/subdir_vars.mk
+-include qpc/src/qv/subdir_vars.mk
 -include subdir_rules.mk
 -include Application/subdir_rules.mk
--include QPC/subdir_rules.mk
--include QPC_ports/subdir_rules.mk
 -include QS/subdir_rules.mk
 -include ek-tm4c123gxl/subdir_rules.mk
+-include qpc/ports/arm-cm/qv/gnu/subdir_rules.mk
+-include qpc/src/qf/subdir_rules.mk
+-include qpc/src/qv/subdir_rules.mk
 -include objects.mk
 
 ifneq ($(MAKECMDGOALS),clean)
@@ -171,8 +173,8 @@ Lesson46.out: $(OBJS) $(LD_SRCS) $(GEN_CMDS)
 # Other Targets
 clean:
 	-$(RM) $(EXE_OUTPUTS__QUOTED)
-	-$(RM) "Application/bsp.o" "Application/main.o" "QPC/qep_hsm.o" "QPC/qep_msm.o" "QPC/qf_act.o" "QPC/qf_actq.o" "QPC/qf_defer.o" "QPC/qf_dyn.o" "QPC/qf_mem.o" "QPC/qf_ps.o" "QPC/qf_qact.o" "QPC/qf_qeq.o" "QPC/qf_qmact.o" "QPC/qf_time.o" "QPC/qv.o" "QPC_ports/qv_port.o" "QS/qs.o" "QS/qs_64bit.o" "QS/qs_fp.o" "QS/qs_rx.o" "QS/qstamp.o" "QS/qutest.o" "ek-tm4c123gxl/startup_TM4C123GH6PM.o" "ek-tm4c123gxl/system_TM4C123GH6PM.o" 
-	-$(RM) "Application/bsp.d" "Application/main.d" "QPC/qep_hsm.d" "QPC/qep_msm.d" "QPC/qf_act.d" "QPC/qf_actq.d" "QPC/qf_defer.d" "QPC/qf_dyn.d" "QPC/qf_mem.d" "QPC/qf_ps.d" "QPC/qf_qact.d" "QPC/qf_qeq.d" "QPC/qf_qmact.d" "QPC/qf_time.d" "QPC/qv.d" "QPC_ports/qv_port.d" "QS/qs.d" "QS/qs_64bit.d" "QS/qs_fp.d" "QS/qs_rx.d" "QS/qstamp.d" "QS/qutest.d" "ek-tm4c123gxl/startup_TM4C123GH6PM.d" "ek-tm4c123gxl/system_TM4C123GH6PM.d" 
+	-$(RM) "Application/bsp.o" "Application/main.o" "QS/qs.o" "QS/qs_64bit.o" "QS/qs_fp.o" "QS/qs_rx.o" "QS/qstamp.o" "QS/qutest.o" "ek-tm4c123gxl/startup_TM4C123GH6PM.o" "ek-tm4c123gxl/system_TM4C123GH6PM.o" "qpc/ports/arm-cm/qv/gnu/qv_port.o" "qpc/src/qf/qep_hsm.o" "qpc/src/qf/qep_msm.o" "qpc/src/qf/qf_act.o" "qpc/src/qf/qf_actq.o" "qpc/src/qf/qf_defer.o" "qpc/src/qf/qf_dyn.o" "qpc/src/qf/qf_mem.o" "qpc/src/qf/qf_ps.o" "qpc/src/qf/qf_qact.o" "qpc/src/qf/qf_qeq.o" "qpc/src/qf/qf_qmact.o" "qpc/src/qf/qf_time.o" "qpc/src/qv/qv.o" 
+	-$(RM) "Application/bsp.d" "Application/main.d" "QS/qs.d" "QS/qs_64bit.d" "QS/qs_fp.d" "QS/qs_rx.d" "QS/qstamp.d" "QS/qutest.d" "ek-tm4c123gxl/startup_TM4C123GH6PM.d" "ek-tm4c123gxl/system_TM4C123GH6PM.d" "qpc/ports/arm-cm/qv/gnu/qv_port.d" "qpc/src/qf/qep_hsm.d" "qpc/src/qf/qep_msm.d" "qpc/src/qf/qf_act.d" "qpc/src/qf/qf_actq.d" "qpc/src/qf/qf_defer.d" "qpc/src/qf/qf_dyn.d" "qpc/src/qf/qf_mem.d" "qpc/src/qf/qf_ps.d" "qpc/src/qf/qf_qact.d" "qpc/src/qf/qf_qeq.d" "qpc/src/qf/qf_qmact.d" "qpc/src/qf/qf_time.d" "qpc/src/qv/qv.d" 
 	-@echo 'Finished clean'
 	-@echo ' '
 

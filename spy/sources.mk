@@ -113,8 +113,9 @@ PDE_DEPS__QUOTED :=
 SUBDIRS := \
 . \
 Application \
-QPC \
-QPC_ports \
 QS \
 ek-tm4c123gxl \
+qpc/ports/arm-cm/qv/gnu \
+qpc/src/qf \
+qpc/src/qv \
 

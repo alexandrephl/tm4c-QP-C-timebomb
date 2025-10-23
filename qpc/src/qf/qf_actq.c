@@ -68,7 +68,8 @@ Q_DEFINE_THIS_MODULE("qf_actq")
 bool QActive_post_(QActive * const me,
     QEvt const * const e,
     uint_fast16_t const margin,
-    void const * const sender){
+    void const * const sender)
+{
     #ifndef Q_SPY
     Q_UNUSED_PAR(sender);
     #endif

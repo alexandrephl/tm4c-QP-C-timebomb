@@ -210,15 +210,13 @@
 								<option id="com.ti.ccstudio.buildDefinitions.TMS470_GNU_9.0.compilerID.STRICT_DWARF.575456580" name="Do not emit DWARF additions beyond selected version (-gstrict-dwarf)" superClass="com.ti.ccstudio.buildDefinitions.TMS470_GNU_9.0.compilerID.STRICT_DWARF" useByScannerDiscovery="false" value="true" valueType="boolean"/>
 								<option id="com.ti.ccstudio.buildDefinitions.TMS470_GNU_9.0.compilerID.DWARF_VERSION.258178368" name="Generate debug information in DWARF version (-gdwarf-)" superClass="com.ti.ccstudio.buildDefinitions.TMS470_GNU_9.0.compilerID.DWARF_VERSION" useByScannerDiscovery="false" value="com.ti.ccstudio.buildDefinitions.TMS470_GNU_9.0.compilerID.DWARF_VERSION.3" valueType="enumerated"/>
 								<option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="com.ti.ccstudio.buildDefinitions.TMS470_GNU_9.0.compilerID.INCLUDE_PATH.679474671" name="Include paths (-I)" superClass="com.ti.ccstudio.buildDefinitions.TMS470_GNU_9.0.compilerID.INCLUDE_PATH" valueType="includePath">
-									<listOptionValue builtIn="false" value="/Users/alexandrepanhaleux/Developer/CCS_Workspace/qpc/src"/>
-									<listOptionValue builtIn="false" value="/Users/alexandrepanhaleux/Developer/CCS_Workspace/qpc/ports/arm-cm/qv/gnu"/>
-									<listOptionValue builtIn="false" value="/Users/alexandrepanhaleux/Developer/CCS_Workspace/qpc/include"/>
 									<listOptionValue builtIn="false" value="/Users/alexandrepanhaleux/Developer/CCS_Workspace/Lesson46/ek-tm4c123gxl"/>
-									<listOptionValue builtIn="false" value="/Users/alexandrepanhaleux/Developer/CMSIS/Include"/>
+									<listOptionValue builtIn="false" value="/Users/alexandrepanhaleux/Developer/CCS_Workspace/Lesson46/qpc/include"/>
+									<listOptionValue builtIn="false" value="/Users/alexandrepanhaleux/Developer/CCS_Workspace/Lesson46/qpc/ports/arm-cm/qv/gnu"/>
+									<listOptionValue builtIn="false" value="/Users/alexandrepanhaleux/Developer/CCS_Workspace/Lesson46/CMSIS/Include"/>
 									<listOptionValue builtIn="false" value="/Users/alexandrepanhaleux/Developer/CCS_Workspace/Lesson46"/>
 									<listOptionValue builtIn="false" value="/Users/alexandrepanhaleux/Developer/CCS_Workspace/Lesson46/Application"/>
 									<listOptionValue builtIn="false" value="/Applications/TI/TivaWare-2.2.0.295"/>
-									<listOptionValue builtIn="false" value="/Applications/TI/ccs/tools/compiler/gcc-arm-none-eabi-9-2019-q4-major/arm-none-eabi/include"/>
 								</option>
 								<option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="com.ti.ccstudio.buildDefinitions.TMS470_GNU_9.0.compilerID.ASM_SPECIFIC_FLAGS.1116512424" name="Miscellaneous assembly source specific flags" superClass="com.ti.ccstudio.buildDefinitions.TMS470_GNU_9.0.compilerID.ASM_SPECIFIC_FLAGS" useByScannerDiscovery="false" valueType="stringList">
 									<listOptionValue builtIn="false" value="[asm: -xassembler-with-cpp]"/>
@@ -271,7 +269,6 @@
 			<resource resourceType="PROJECT" workspacePath="/Lesson46"/>
 		</configuration>
 	</storageModule>
-	<storageModule moduleId="scannerConfiguration"/>
 	<storageModule moduleId="org.eclipse.cdt.make.core.buildtargets">
 		<buildTargets>
 			<target name="spy" path="" targetID="org.eclipse.cdt.build.MakeTargetBuilder">
@@ -284,4 +281,5 @@
 			</target>
 		</buildTargets>
 	</storageModule>
+	<storageModule moduleId="scannerConfiguration"/>
 </cproject>
