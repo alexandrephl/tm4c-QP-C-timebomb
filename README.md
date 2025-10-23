@@ -70,7 +70,7 @@ You can view all runtime events, button changes, and LED transitions in real tim
 
 •	Mac/Linux:
     cd /path/to/qtools/bin./qspy -c /dev/cu.usbmodemXXXX -b 115200
-    # or ./qspy -c /dev/ttyACM0 -b 115200 on Linux
+    # or ./qspy -c /dev/ttyACM0 -b 115200 on Linux  
 •	Windows:
     qspy.exe -c COM5 -b 115200
 
