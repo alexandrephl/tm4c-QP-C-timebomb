@@ -31,7 +31,7 @@ It showcases a hierarchical state machine, time events, and live runtime tracing
 - **Code Composer Studio (CCS)** v12 or later  
 - **EK-TM4C123GXL** LaunchPad  
 - **TivaWare SDK** (for low-level drivers, not bundled in repo)
-- **QTools package** from Quantum Leaps (for QSPY)
+- **QTools package** from Quantum Leaps (for QSPY, not bundled in repo)
 
 ### To Build:
 
