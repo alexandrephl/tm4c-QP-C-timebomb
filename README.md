@@ -53,11 +53,13 @@ The logic is entirely event-driven: no polling loops, only asynchronous event di
 
 ### Main Concept
 
-The **TimeBomb Active Object** models a simple countdown device:
-- When the user **presses the button**, the TimeBomb becomes *armed*.
-- It then **blinks the red LED five times**, using time-based events.
-- After the countdown finishes, it enters the **“boom”** state — all LEDs on.
-- The system can then be reset manually or by restarting.
+The **TimeBomb Active Object** models a simple countdown device with arm/disarm control:
+- When the user **presses SW1**, the TimeBomb starts the countdown (if armed).  
+- **SW2** toggles between *disarmed* and *armed* states.  
+  - When *disarmed*, the bomb is safe and SW1 has no effect.  
+  - When *armed*, SW1 re-starts the countdown.  
+- After the countdown finishes, it enters the **“boom”** state — all LEDs on.  
+- The system can then be reset manually or by restarting.  
 
 ## 📡 QSPY Tracing
 
