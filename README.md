@@ -10,19 +10,17 @@ It showcases a hierarchical state machine, time events, and live runtime tracing
 ## 📂 Repository Layout
 
 |  
-├── Application/                 	# Your application logic (main, bsp, uc_ao...)  
+├── Application/                 	# Your application logic (main, bsp)  
 |  
-├── QPC/               		    # QP/C framework sources (QF, QHsm, QActive, etc.)  
+├── QPC/               		    	# QP/C framework sources (QF, QActive, ports, etc.)  
 |  
-├── QPC_ports/               		# QP/C port for ARM Cortex-M4F  
+├── ek-tm4c123gxl/               	# Board/Microcontroller-specific files, startup code etc.  
 |  
-├── ek-tm4c123gxl/               	# Board/Microcontroller-specific files  
-|  
-├── QS/               		    # CMSIS core headers  
+├── CMSIS/               		    # CMSIS core headers  
 |  
 ├── targetConfig/                	# CCS Target Configurations  
 |  
-├── spy/                	# QSPY tool setup scripts  
+├── QS/                				# QSPY tool setup scripts  
 
 ---
 
@@ -65,6 +63,9 @@ The **TimeBomb Active Object** models a simple countdown device:
 
 QS (Quantum Spy) tracing is fully integrated via UART0 @ 115200 baud.
 You can view all runtime events, button changes, and LED transitions in real time.
+
+IMPORTANT : To enable tracing, make sure the Spy build configuration is active in Code Composer Studio:
+Project → Build Configurations → Set Active → spy
 
 ### Run QSPY
 
