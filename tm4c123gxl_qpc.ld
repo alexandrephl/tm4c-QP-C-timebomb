@@ -95,7 +95,7 @@ SECTIONS {
     } >RAM
 
     __exidx_start = .;
-    .ARM.exidx   : { *(.ARM.exidx* .gnu.linkonce.armexidx.*) } >ROM
+    .ARM.exidx   : { *(.ARM.exidx* .gnu.linkonce.armexidx.*) } >RAM
     __exidx_end = .;
 
     PROVIDE ( end = _ebss );
