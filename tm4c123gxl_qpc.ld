@@ -1,13 +1,13 @@
-/*****************************************************************************
-* Product: Linker script for EK-TM4C123GXL, GNU-ARM linker
-* Last Updated for Version: 5.9.8
-* Date of the Last Update:  2017-09-13
+/******************************************************************************
+* @file    tm4c123gxl_qpc.ld
+* @brief   GNU ARM Linker Script for TM4C123GH6PM (EK-TM4C123GXL, QP/C Project)
+* @board   EK-TM4C123GXL (TM4C123GH6PM)
+* @author  Alexandre Panhaleux
 *
-*                    Q u a n t u m     L e a P s
-*                    ---------------------------
-*                    innovating embedded systems
+* @note    Based on Quantum Leaps QP/C template.
 *
-* Copyright (C) Quantum Leaps, LLC. All rights reserved.
+* Copyright	(C) Quantum Leaps, LLC.
+*		(C) Modifications 2025 Alexandre Panhaleux.
 *
 *****************************************************************************/
 OUTPUT_FORMAT("elf32-littlearm", "elf32-bigarm", "elf32-littlearm")
@@ -23,7 +23,7 @@ MEMORY { /* memory map of Tiva TM4C123GH6PM */
 STACK_SIZE = 4096;
 
 /* The size of the heap used by the application. NOTE: you need to adjust   */
-HEAP_SIZE = 1024;
+HEAP_SIZE = 0;
 
 SECTIONS {
 
@@ -95,7 +95,7 @@ SECTIONS {
     } >RAM
 
     __exidx_start = .;
-    .ARM.exidx   : { *(.ARM.exidx* .gnu.linkonce.armexidx.*) } >RAM
+    .ARM.exidx   : { *(.ARM.exidx* .gnu.linkonce.armexidx.*) } >ROM
     __exidx_end = .;
 
     PROVIDE ( end = _ebss );
