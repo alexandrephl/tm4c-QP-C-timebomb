@@ -64,6 +64,9 @@ The **TimeBomb Active Object** models a simple countdown device:
 QS (Quantum Spy) tracing is fully integrated via UART0 @ 115200 baud.
 You can view all runtime events, button changes, and LED transitions in real time.
 
+IMPORTANT : To enable tracing, make sure the Spy build configuration is active in Code Composer Studio:
+Project → Build Configurations → Set Active → spy
+
 ### Run QSPY
 
 •	Mac/Linux:  
