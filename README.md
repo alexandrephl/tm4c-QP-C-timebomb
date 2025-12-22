@@ -7,7 +7,7 @@ It showcases a hierarchical state machine, time events, and live runtime tracing
 
 ---
 
-## 📂 Repository Layout
+##  Repository Layout
 
 |  
 ├── Application/                 	# Your application logic (main, bsp)  
@@ -24,7 +24,7 @@ It showcases a hierarchical state machine, time events, and live runtime tracing
 
 ---
 
-##🛠 Build & Run Instructions
+## Build & Run Instructions
 
 ### Prerequisites
 
@@ -46,7 +46,7 @@ It showcases a hierarchical state machine, time events, and live runtime tracing
 	- Connect the LaunchPad via USB  
 	- Click the debug icon or *Run → Debug* to flash and start execution.
 
-## 💡 How It Works
+## How It Works
 
 This project implements a small reactive system following the Active Object design pattern provided by QP/C.
 The logic is entirely event-driven: no polling loops, only asynchronous event dispatching.
@@ -61,7 +61,7 @@ The **TimeBomb Active Object** models a simple countdown device with arm/disarm 
 - After the countdown finishes, it enters the **“boom”** state — all LEDs on.  
 - The system can then be reset manually or by restarting.  
 
-## 📡 QSPY Tracing
+## QSPY Tracing
 
 QS (Quantum Spy) tracing is fully integrated via UART0 @ 115200 baud.
 You can view all runtime events, button changes, and LED transitions in real time.
@@ -77,12 +77,12 @@ Project → Build Configurations → Set Active → spy
 •	Windows:  
     qspy.exe -c COM5 -b 115200
 
-## 📄 License & Credits
+## License & Credits
 
 	- Main application code: MIT (see `LICENSE.txt`)
 	- Third-party components and their licenses: see `THIRD_PARTY_NOTICES.md`
 
-## ✨ Author
+## Author
 **Alexandre Panhaleux**  
 Embedded Software Engineer  
 [GitHub: @alexandrephl](https://github.com/alexandrephl)
